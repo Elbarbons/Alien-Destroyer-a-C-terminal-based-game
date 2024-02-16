@@ -28,7 +28,7 @@ gcc Alien-Destroyer.c -lncurses -o Alien-Destroyer.exe
 - ncurses.h library
 
 ## Gameplay demo
-![Gameplay](/screenshots/gameplay.png)
+![Gameplay](/demo/gameplay.gif)
 
 ## Contributions
 Contributions are welcome! Feel free to submit pull requests or open issues for any improvements, bug fixes, or feature requests.
