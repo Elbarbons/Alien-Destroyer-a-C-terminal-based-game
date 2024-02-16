@@ -22,7 +22,7 @@ void fireTank(int x, int y, int rocketsXY[][10]);
 void rocketAcceleration(int rocketsXY[][10], int *rocketVelocity);
 void checkCollisions(int rocketsXY[][10], int aliens[][10], int *aliensCounter, int *explosionsX, int *explosionsTime, int *explosionCounter, int *score, int alienProjectilesXY[][10], int tankPosition, int *hp);
 void moveAlienProjectile(int alienProjectilesX[][10]);
-void endGame();
+void endGame(int score);
 
 int x_max;
 int y_max;
@@ -326,8 +326,8 @@ int play()
             }
         }
         rocket(rocketsXY, y_max);
-        tank(tankPosition, y_max);
         alienShot(alienProjectilesXY);
+        tank(tankPosition, y_max);
         terrainMoon(x_max, y_max);
         surfaceMoon(x_max, y_max);
 
@@ -473,7 +473,7 @@ void checkCollisions(int rocketsXY[][10], int aliens[][10], int *aliensCounter, 
 
     for (int i = 0; i < 10; i++)
     {
-        if (alienProjectilesXY[1][i] != -100 && alienProjectilesXY[1][i] == y_max - 12 && alienProjectilesXY[1][i] <= tankPosition + 18 && alienProjectilesXY[1][i] >= tankPosition - 3)
+        if (alienProjectilesXY[1][i] != -100 && alienProjectilesXY[1][i] == y_max - 12 && alienProjectilesXY[0][i] <= tankPosition + 18 && alienProjectilesXY[0][i] >= tankPosition - 3)
         {
             *hp -= 1;
             alienProjectilesXY[0][i] = -100;
