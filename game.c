@@ -223,8 +223,8 @@ int play()
     int fireDelay = 0;
     int alienDelay = 0;
     int wave = 0;
-    int hp = 0;
-    int score = 250;
+    int hp = 3;
+    int score = 0;
     int random;
 
     // First row keeps track of aliens' X-position,  second row keeps track of the type of alien
